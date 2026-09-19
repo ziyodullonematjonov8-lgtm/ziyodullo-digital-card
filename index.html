@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Ziyodullo Digital Card — Japanese, Uzbek and Russian Translator & Interpreter"
+    >
+
+    <meta
+        name="theme-color"
+        content="#08090d"
+    >
+
+    <title>Ziyodullo Digital Card</title>
+
+
+    <!-- CSS -->
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+
+    <!-- FONT AWESOME -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =================================
+         MAIN CARD
+    ================================= -->
+
+    <div class="card">
+
+
+        <!-- =================================
+             PROFILE
+        ================================= -->
+
+        <div class="profile">
+
+
+            <!-- PROFILE IMAGE -->
+
+            <div class="profile-image">
+
+                <img
+                    src="profile.jpg"
+                    alt="Ziyodullo"
+                    onerror="this.style.display='none'; this.parentElement.classList.add('no-image');"
+                >
+
+            </div>
+
+
+            <!-- NAME -->
+
+            <h1>
+                ZIYODULLO
+            </h1>
+
+
+            <!-- JOB -->
+
+            <p class="job">
+                Translator & Interpreter
+            </p>
+
+
+            <!-- LANGUAGES -->
+
+            <p class="languages">
+                Japanese • Uzbek • Russian
+            </p>
+
+
+            <!-- DESCRIPTION -->
+
+            <p class="description">
+                Japanese, Uzbek and Russian Translator & Interpreter
+            </p>
+
+
+        </div>
+
+
+
+        <!-- =================================
+             CONTACT LINKS
+        ================================= -->
+
+        <div class="links">
+
+
+            <!-- PHONE 1 -->
+
+            <a
+                href="tel:+998507448890"
+                class="link-card"
+            >
+
+                <span>
+                    <i class="fa-solid fa-phone"></i>
+                </span>
+
+                <div>
+
+                    <strong>
+                        Telefon
+                    </strong>
+
+                    <small>
+                        +998 50 744 88 90
+                    </small>
+
+                </div>
+
+            </a>
+
+
+
+            <!-- PHONE 2 -->
+
+            <a
+                href="tel:+998200027450"
+                class="link-card"
+            >
+
+                <span>
+                    <i class="fa-solid fa-phone"></i>
+                </span>
+
+                <div>
+
+                    <strong>
+                        Telefon
+                    </strong>
+
+                    <small>
+                        +998 20 002 74 50
+                    </small>
+
+                </div>
+
+            </a>
+
+
+
+            <!-- TELEGRAM -->
+
+            <a
+                href="https://t.me/Leo_88_90"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="link-card"
+            >
+
+                <span>
+                    <i class="fa-brands fa-telegram"></i>
+                </span>
+
+                <div>
+
+                    <strong>
+                        Telegram
+                    </strong>
+
+                    <small>
+                        @Leo_88_90
+                    </small>
+
+                </div>
+
+            </a>
+
+
+
+            <!-- INSTAGRAM -->
+
+            <a
+                href="https://www.instagram.com/n.z?stkn=MWp6ZjZwdTZ3MXhqZg=="
+                target="_blank"
+                rel="noopener noreferrer"
+                class="link-card"
+            >
+
+                <span>
+                    <i class="fa-brands fa-instagram"></i>
+                </span>
+
+                <div>
+
+                    <strong>
+                        Instagram
+                    </strong>
+
+                    <small>
+                        Instagram profile
+                    </small>
+
+                </div>
+
+            </a>
+
+
+
+            <!-- FACEBOOK -->
+
+            <a
+                href="https://www.facebook.com/share/1KQevxwp3o/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="link-card"
+            >
+
+                <span>
+                    <i class="fa-brands fa-facebook-f"></i>
+                </span>
+
+                <div>
+
+                    <strong>
+                        Facebook
+                    </strong>
+
+                    <small>
+                        Facebook profile
+                    </small>
+
+                </div>
+
+            </a>
+
+
+
+            <!-- WHATSAPP -->
+
+            <a
+                href="https://wa.me/998507448890"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="link-card"
+            >
+
+                <span>
+                    <i class="fa-brands fa-whatsapp"></i>
+                </span>
+
+                <div>
+
+                    <strong>
+                        WhatsApp
+                    </strong>
+
+                    <small>
+                        @Leo_88_90
+                    </small>
+
+                </div>
+
+            </a>
+
+
+
+            <!-- GMAIL -->
+
+            <a
+                href="mailto:ziyodullonematjonov8@gmail.com"
+                class="link-card"
+            >
+
+                <span>
+                    <i class="fa-solid fa-envelope"></i>
+                </span>
+
+                <div>
+
+                    <strong>
+                        Gmail
+                    </strong>
+
+                    <small>
+                        ziyodullonematjonov8@gmail.com
+                    </small>
+
+                </div>
+
+            </a>
+
+
+        </div>
+
+
+
+        <!-- =================================
+             QR CODE
+        ================================= -->
+
+        <div class="qr-section">
+
+            <p class="qr-title">
+                Digital Card
+            </p>
+
+
+            <div id="qrcode"></div>
+
+
+            <p class="qr-text">
+                QR kodni skaner qiling
+            </p>
+
+        </div>
+
+
+
+        <!-- =================================
+             SAVE CONTACT
+        ================================= -->
+
+        <div class="save-contact">
+
+            <button
+                id="saveContact"
+                type="button"
+            >
+
+                <i class="fa-solid fa-user-plus"></i>
+
+                Kontaktni saqlash
+
+            </button>
+
+        </div>
+
+
+
+        <!-- =================================
+             NFC SHARE
+        ================================= -->
+
+        <div class="nfc-share">
+
+            <button
+                id="nfcShare"
+                type="button"
+            >
+
+                <i class="fa-solid fa-wifi"></i>
+
+                NFC orqali ulashish
+
+            </button>
+
+
+            <p id="nfcStatus"></p>
+
+        </div>
+
+
+
+        <!-- =================================
+             FOOTER
+        ================================= -->
+
+        <div class="footer">
+
+            <p>
+                © 2026 Ziyodullo Digital Card
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

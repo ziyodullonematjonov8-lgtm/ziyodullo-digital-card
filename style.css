@@ -1,0 +1,1045 @@
+/* =================================
+   ZIYODULLO DIGITAL CARD
+   PREMIUM FINAL DESIGN
+================================= */
+
+
+/* =================================
+   RESET
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =================================
+   HTML
+================================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* =================================
+   BODY
+================================= */
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px 15px;
+
+    background:
+        radial-gradient(
+            circle at 15% 15%,
+            rgba(99, 102, 241, 0.20),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 85% 85%,
+            rgba(6, 182, 212, 0.14),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 50% 50%,
+            rgba(139, 92, 246, 0.06),
+            transparent 45%
+        ),
+        #08090d;
+
+    color: #ffffff;
+
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    overflow-x: hidden;
+}
+
+
+/* =================================
+   BACKGROUND EFFECT
+================================= */
+
+body::before {
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            120deg,
+            transparent 0%,
+            rgba(255, 255, 255, 0.018) 50%,
+            transparent 100%
+        );
+
+    z-index: -1;
+}
+
+
+/* =================================
+   MAIN CARD
+================================= */
+
+.card {
+    width: 100%;
+
+    max-width: 460px;
+
+    padding: 38px 25px 30px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.075),
+            rgba(255, 255, 255, 0.035)
+        );
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    border-radius: 30px;
+
+    backdrop-filter: blur(24px);
+
+    -webkit-backdrop-filter: blur(24px);
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.50),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+
+    text-align: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+    animation: cardAppear 0.7s ease both;
+}
+
+
+/* =================================
+   CARD LIGHT
+================================= */
+
+.card::before {
+    content: "";
+
+    position: absolute;
+
+    top: -120px;
+    left: 50%;
+
+    width: 260px;
+    height: 260px;
+
+    transform: translateX(-50%);
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(99, 102, 241, 0.18),
+            transparent 70%
+        );
+
+    pointer-events: none;
+}
+
+
+/* =================================
+   PROFILE
+================================= */
+
+.profile {
+    position: relative;
+
+    z-index: 1;
+}
+
+
+/* =================================
+   PROFILE IMAGE
+================================= */
+
+.profile-image {
+    width: 90px;
+
+    height: 90px;
+
+    margin: 0 auto 20px;
+
+    padding: 3px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #6366f1,
+            #8b5cf6,
+            #06b6d4
+        );
+
+    box-shadow:
+        0 12px 35px rgba(99, 102, 241, 0.35);
+
+    overflow: hidden;
+
+    color: #ffffff;
+
+    font-size: 34px;
+
+    font-weight: 700;
+}
+
+
+/* =================================
+   PROFILE IMAGE
+================================= */
+
+.profile-image img {
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+}
+
+
+/* =================================
+   IMAGE FALLBACK
+================================= */
+
+.profile-image.no-image::after {
+    content: "Z";
+
+    color: #ffffff;
+
+    font-size: 34px;
+
+    font-weight: 700;
+}
+
+
+/* =================================
+   NAME
+================================= */
+
+.profile h1 {
+    font-size: 32px;
+
+    line-height: 1.2;
+
+    font-weight: 800;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 9px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ffffff,
+            #c4b5fd
+        );
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    background-clip: text;
+}
+
+
+/* =================================
+   JOB
+================================= */
+
+.job {
+    font-size: 17px;
+
+    font-weight: 600;
+
+    color: #c4b5fd;
+
+    margin-bottom: 8px;
+}
+
+
+/* =================================
+   LANGUAGES
+================================= */
+
+.languages {
+    display: inline-block;
+
+    padding: 6px 12px;
+
+    margin-bottom: 16px;
+
+    border: 1px solid rgba(139, 92, 246, 0.20);
+
+    border-radius: 30px;
+
+    background: rgba(139, 92, 246, 0.08);
+
+    color: #a5b4fc;
+
+    font-size: 12px;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* =================================
+   DESCRIPTION
+================================= */
+
+.description {
+    max-width: 350px;
+
+    margin: 0 auto 30px;
+
+    color: #9aa6b8;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* =================================
+   CONTACT LINKS
+================================= */
+
+.links {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* =================================
+   LINK CARD
+================================= */
+
+.link-card {
+    width: 100%;
+
+    min-height: 70px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 13px 15px;
+
+    text-decoration: none;
+
+    color: #ffffff;
+
+    text-align: left;
+
+    background:
+        rgba(255, 255, 255, 0.045);
+
+    border: 1px solid rgba(255, 255, 255, 0.085);
+
+    border-radius: 17px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* =================================
+   LINK SHINE
+================================= */
+
+.link-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -100%;
+
+    width: 60%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 255, 255, 0.06),
+            transparent
+        );
+
+    transform: skewX(-20deg);
+
+    transition: left 0.5s ease;
+}
+
+
+/* =================================
+   LINK HOVER
+================================= */
+
+.link-card:hover {
+    transform: translateY(-3px);
+
+    background:
+        rgba(255, 255, 255, 0.085);
+
+    border-color:
+        rgba(139, 92, 246, 0.40);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+
+.link-card:hover::before {
+    left: 130%;
+}
+
+
+/* =================================
+   LINK ICON
+================================= */
+
+.link-card > span {
+    width: 43px;
+
+    height: 43px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 13px;
+
+    background:
+        rgba(99, 102, 241, 0.15);
+
+    color: #a78bfa;
+
+    font-size: 18px;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease;
+}
+
+
+.link-card:hover > span {
+    transform: scale(1.08);
+}
+
+
+/* =================================
+   LINK TEXT
+================================= */
+
+.link-card div {
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+
+.link-card strong {
+    font-size: 14px;
+
+    font-weight: 650;
+
+    color: #f8fafc;
+}
+
+
+.link-card small {
+    font-size: 12px;
+
+    color: #7f8da3;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+/* =================================
+   ARROW
+================================= */
+
+.link-card::after {
+    content: "›";
+
+    margin-left: auto;
+
+    flex-shrink: 0;
+
+    font-size: 25px;
+
+    line-height: 1;
+
+    color: #526074;
+
+    transition:
+        transform 0.25s ease,
+        color 0.25s ease;
+}
+
+
+.link-card:hover::after {
+    color: #a78bfa;
+
+    transform: translateX(4px);
+}
+
+
+/* =================================
+   ICON COLORS
+================================= */
+
+
+/* PHONE */
+
+.link-card:nth-child(1) > span,
+.link-card:nth-child(2) > span {
+    background: rgba(34, 197, 94, 0.13);
+
+    color: #4ade80;
+}
+
+
+/* TELEGRAM */
+
+.link-card:nth-child(3) > span {
+    background: rgba(0, 136, 204, 0.13);
+
+    color: #29b6f6;
+}
+
+
+/* INSTAGRAM */
+
+.link-card:nth-child(4) > span {
+    background: rgba(225, 48, 108, 0.13);
+
+    color: #f472b6;
+}
+
+
+/* FACEBOOK */
+
+.link-card:nth-child(5) > span {
+    background: rgba(24, 119, 242, 0.13);
+
+    color: #60a5fa;
+}
+
+
+/* WHATSAPP */
+
+.link-card:nth-child(6) > span {
+    background: rgba(37, 211, 102, 0.13);
+
+    color: #4ade80;
+}
+
+
+/* GMAIL */
+
+.link-card:nth-child(7) > span {
+    background: rgba(234, 67, 53, 0.13);
+
+    color: #f87171;
+}
+
+
+/* =================================
+   QR SECTION
+================================= */
+
+.qr-section {
+    margin-top: 30px;
+
+    padding-top: 25px;
+
+    border-top:
+        1px solid rgba(255, 255, 255, 0.08);
+
+    text-align: center;
+}
+
+
+/* QR TITLE */
+
+.qr-title {
+    margin-bottom: 15px;
+
+    color: #c4b5fd;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+}
+
+
+/* QR BOX */
+
+#qrcode {
+    width: 150px;
+
+    height: 150px;
+
+    margin: 0 auto;
+
+    padding: 10px;
+
+    background: #ffffff;
+
+    border-radius: 16px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.30);
+}
+
+
+/* QR IMAGE */
+
+#qrcode img {
+    width: 130px;
+
+    height: 130px;
+
+    display: block;
+}
+
+
+/* QR TEXT */
+
+.qr-text {
+    margin-top: 12px;
+
+    color: #64748b;
+
+    font-size: 11px;
+}
+
+
+/* =================================
+   SAVE CONTACT
+================================= */
+
+.save-contact {
+    margin-top: 18px;
+}
+
+
+/* SAVE BUTTON */
+
+#saveContact {
+    width: 100%;
+
+    min-height: 52px;
+
+    padding: 14px 20px;
+
+    border: none;
+
+    border-radius: 15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #6366f1,
+            #8b5cf6
+        );
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    font-weight: 650;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 12px 28px rgba(99, 102, 241, 0.25);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        filter 0.25s ease;
+}
+
+
+/* SAVE ICON */
+
+#saveContact i {
+    margin-right: 8px;
+}
+
+
+/* SAVE HOVER */
+
+#saveContact:hover {
+    transform: translateY(-2px);
+
+    filter: brightness(1.08);
+
+    box-shadow:
+        0 16px 35px rgba(99, 102, 241, 0.35);
+}
+
+
+/* SAVE ACTIVE */
+
+#saveContact:active {
+    transform: scale(0.98);
+}
+
+
+/* =================================
+   NFC SHARE
+================================= */
+
+.nfc-share {
+    margin-top: 12px;
+}
+
+
+/* NFC BUTTON */
+
+#nfcShare {
+    width: 100%;
+
+    min-height: 52px;
+
+    padding: 14px 20px;
+
+    border: 1px solid rgba(139, 92, 246, 0.35);
+
+    border-radius: 15px;
+
+    background:
+        rgba(139, 92, 246, 0.10);
+
+    color: #c4b5fd;
+
+    font-size: 14px;
+
+    font-weight: 650;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 25px rgba(99, 102, 241, 0.08);
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* NFC ICON */
+
+#nfcShare i {
+    margin-right: 8px;
+}
+
+
+/* NFC HOVER */
+
+#nfcShare:hover {
+    transform: translateY(-2px);
+
+    background:
+        rgba(139, 92, 246, 0.18);
+
+    border-color:
+        rgba(167, 139, 250, 0.60);
+
+    box-shadow:
+        0 12px 30px rgba(99, 102, 241, 0.18);
+}
+
+
+/* NFC ACTIVE */
+
+#nfcShare:active {
+    transform: scale(0.98);
+}
+
+
+/* NFC STATUS */
+
+#nfcStatus {
+    margin-top: 8px;
+
+    min-height: 16px;
+
+    color: #7f8da3;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+}
+
+
+/* =================================
+   FOOTER
+================================= */
+
+.footer {
+    margin-top: 25px;
+
+    padding-top: 18px;
+
+    border-top:
+        1px solid rgba(255, 255, 255, 0.06);
+}
+
+
+.footer p {
+    color: #566174;
+
+    font-size: 10px;
+
+    letter-spacing: 0.4px;
+}
+
+
+/* =================================
+   CARD ANIMATION
+================================= */
+
+@keyframes cardAppear {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(20px)
+            scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 500px) {
+
+    body {
+        padding: 15px 10px;
+
+        align-items: flex-start;
+    }
+
+
+    .card {
+        max-width: 100%;
+
+        margin-top: 10px;
+
+        padding: 30px 16px 25px;
+
+        border-radius: 25px;
+    }
+
+
+    .profile-image {
+        width: 82px;
+
+        height: 82px;
+    }
+
+
+    .profile h1 {
+        font-size: 27px;
+
+        letter-spacing: 3px;
+    }
+
+
+    .job {
+        font-size: 15px;
+    }
+
+
+    .languages {
+        font-size: 11px;
+
+        padding: 6px 10px;
+    }
+
+
+    .description {
+        font-size: 12px;
+
+        margin-bottom: 25px;
+    }
+
+
+    .link-card {
+        min-height: 66px;
+
+        padding: 11px 12px;
+
+        gap: 12px;
+    }
+
+
+    .link-card > span {
+        width: 40px;
+
+        height: 40px;
+
+        font-size: 17px;
+    }
+
+
+    .link-card strong {
+        font-size: 13px;
+    }
+
+
+    .link-card small {
+        font-size: 11px;
+    }
+
+
+    .qr-section {
+        margin-top: 25px;
+
+        padding-top: 22px;
+    }
+
+
+    #qrcode {
+        width: 140px;
+
+        height: 140px;
+    }
+
+
+    #qrcode img {
+        width: 120px;
+
+        height: 120px;
+    }
+
+
+    #saveContact,
+    #nfcShare {
+        min-height: 50px;
+
+        font-size: 13px;
+    }
+
+}
+
+
+/* =================================
+   VERY SMALL PHONES
+================================= */
+
+@media (max-width: 360px) {
+
+    .card {
+        padding-left: 12px;
+
+        padding-right: 12px;
+    }
+
+
+    .profile h1 {
+        font-size: 24px;
+
+        letter-spacing: 2px;
+    }
+
+
+    .link-card {
+        padding-left: 10px;
+
+        padding-right: 10px;
+    }
+
+
+    .link-card::after {
+        font-size: 22px;
+    }
+
+}
